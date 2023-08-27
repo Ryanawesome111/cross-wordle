@@ -1,11 +1,6 @@
 import generator from "random-seed";
 import { words as dictionary } from "../constants/words";
-import { words as goodDictionary } from "../constants/words/good-words";
-import { words as FiveCharWords } from "../constants/words/good-words/five";
-import { words as FourCharWords } from "../constants/words/good-words/four";
-import { words as SixCharWords } from "../constants/words/good-words/six";
-import { words as ThreeCharWords } from "../constants/words/good-words/three";
-import { words as TwoCharWords } from "../constants/words/good-words/two";
+import { words as EightGradeWords } from "../constants/words/good-words/eight";
 import { Config } from "./game";
 
 const debug = false;
@@ -175,16 +170,8 @@ function getWordsFromBoardTTB(board: SolutionBoard): string[] {
 
 export function getWordsOfLength(length: number): string[] {
   switch (length) {
-    case 2:
-      return TwoCharWords;
-    case 3:
-      return ThreeCharWords;
-    case 4:
-      return FourCharWords;
-    case 5:
-      return FiveCharWords;
-    case 6:
-      return SixCharWords;
+    case 3,4,5,6,7:
+      return EightGradeWords;
   }
 
   return [];
