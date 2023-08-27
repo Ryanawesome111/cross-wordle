@@ -170,7 +170,7 @@ function getWordsFromBoardTTB(board: SolutionBoard): string[] {
 
 export function getWordsOfLength(length: number): string[] {
   switch (length) {
-    case 3,4,5,6,7:
+    case 6:
       return EightGradeWords;
   }
 
